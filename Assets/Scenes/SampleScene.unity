@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137973855}
   m_Layer: 0
-  m_Name: Anchobi's Gameobject
+  m_Name: Mine's Gameobject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
