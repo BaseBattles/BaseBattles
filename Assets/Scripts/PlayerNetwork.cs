@@ -35,8 +35,7 @@ public class PlayerNetwork : NetworkBehaviour
     private void Start(){
         // Get references to scene objects
         nameInputField = GameObject.Find("Name Input Field").GetComponent<TMP_InputField>();
-        // Set initial name to random number
-        playerName.Value = Random.Range(0,100).ToString();
+        
     }
 
     private void Update(){
@@ -45,6 +44,11 @@ public class PlayerNetwork : NetworkBehaviour
         // Only run the rest of the update code if we own this player
         if (!IsOwner) return;
 
+        if(playerName.Value==""){
+            // Set initial name to random number
+            playerName.Value = Random.Range(0,100).ToString();  
+        } 
+        
         GetInputs();
         AlignToSurface();
         MoveCamera();
