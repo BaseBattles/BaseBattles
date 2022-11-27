@@ -663,11 +663,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 9c03a6dd-2077-415d-8d3f-989c37ec6d45
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Base Battles
+  organizationId: armour-piercing-studios
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
