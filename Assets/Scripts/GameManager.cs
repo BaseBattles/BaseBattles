@@ -174,7 +174,7 @@ public class GameManager : MonoBehaviour
         UpdateState?.Invoke("Creating a new match...");
         
         // External connections
-        int maxConnections = 1;
+        int maxConnections = 7;
         
         try
         {
@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
             _hostData.JoinCode = await Relay.Instance.GetJoinCodeAsync(allocation.AllocationId);
             
             string lobbyName = "game_lobby";
-            int maxPlayers = 2;
+            int maxPlayers = 8;
             CreateLobbyOptions options = new CreateLobbyOptions();
             options.IsPrivate = false;
             
