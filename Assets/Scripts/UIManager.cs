@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject playButton;
+    [SerializeField] private GameObject gameHUD, mainMenu;
     [SerializeField] private Text stateText;
 
     private void Start()
@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
 
     private void MatchFound()
     {
-        playButton.SetActive(false);
+        ToggleMenu(false);
     }
 
     private void OnDestroy()
@@ -31,5 +31,10 @@ public class UIManager : MonoBehaviour
         // Unsubscribe from events
         GameManager.Instance.MatchFound -= MatchFound;
         GameManager.Instance.UpdateState -= UpdateState;
+    }
+
+    public void ToggleMenu(bool mainMenuActive){
+        mainMenu.SetActive(mainMenuActive);
+        gameHUD.SetActive(!mainMenuActive);
     }
 }
